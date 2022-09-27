@@ -3,6 +3,7 @@ from pathlib import Path
 import glob
 from tqdm import tqdm
 
+
 def C_PP( ip_path, op_path ): 
     Codeset = ip_path
     Preprocessed = op_path
@@ -14,6 +15,7 @@ def C_PP( ip_path, op_path ):
             cmd = 'gcc -E -I' + pycpath + ' ' + code_path + ' > ' + op_path
             os.system(cmd)
 
+            
 pycpath = r'C:\Users\nikhi\OneDrive\Documents\Engineering-3\6thSEM\Capstone\code\pycparser\utils\fake_libc_include' # Path to pycparsers fake_lib_include
 directory = r'C:\Users\nikhi\OneDrive\Documents\gitUploads\Capstone_Dataset\C' # Base Directory with all C folders
 for root, subdirectories, files in tqdm(list(os.walk(directory))):
